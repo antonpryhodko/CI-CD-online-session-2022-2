@@ -50,6 +50,12 @@ pipeline {
       }
     }
 
+    stage('Validation') {
+      steps {
+        sh 'curl -i http;//localhost:9000/test_string'
+      }
+    }
+
   }
   environment {
     registry = 'vpanton/flask-app'
